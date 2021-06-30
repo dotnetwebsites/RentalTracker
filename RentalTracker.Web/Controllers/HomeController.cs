@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace RentalTracker.Web.Controllers
 {
-    [AllowAnonymous]
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
