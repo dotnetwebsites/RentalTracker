@@ -25,36 +25,17 @@ namespace RentalTracker.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                    options.UseSqlServer(
-                        Configuration.GetConnectionString("DefaultConnection")));
-
-            services.AddDefaultIdentity<ApplicationUser>(
-                options =>
-                {
-                    options.SignIn.RequireConfirmedAccount = false;
-                    options.Password.RequireLowercase = true;
-                    options.Password.RequireUppercase = true;
-                    options.Password.RequireDigit = true;
-                    options.Password.RequiredLength = 8;
-                })
-                .AddRoles<IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders();
-
-            services.AddMvc(options =>
-            {
-                var policy = new AuthorizationPolicyBuilder()
-                .RequireAuthenticatedUser()
-                .Build();
-                options.Filters.Add(new AuthorizeFilter(policy));
-            }).AddXmlSerializerFormatters();
-
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy("Admin", policy =>
-                policy.RequireUserName("admin"));
-            });
+            services.AddAuthentication()
+                   .AddGoogle(options =>
+                   {
+                       options.ClientId = Configuration["GoogleAuth:ClientID"];
+                       options.ClientSecret = Configuration["GoogleAuth:Secret"];
+                   })
+                   .AddFacebook(options =>
+                   {
+                       options.AppId = Configuration["FacebookAuth:ClientID"];
+                       options.ClientSecret = Configuration["FacebookAuth:Secret"];
+                   });
 
             services.AddControllersWithViews();
 
