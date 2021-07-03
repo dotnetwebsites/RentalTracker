@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using RentalTracker.Web.Utilities;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,7 +10,12 @@ namespace RentalTracker.Web.Models
     public class TenantMaster : BaseEntity
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+
+        //public virtual ICollection<Country> TenantRelatedCountries { get; set; }
+        //public virtual ICollection<State> TenantRelatedStates { get; set; }
+        //public virtual ICollection<City> TenantRelatedCities { get; set; }
 
         [Required(ErrorMessage = "Please enter house rent")]
         [Display(Name = "Monthly House Rent")]
@@ -42,6 +48,8 @@ namespace RentalTracker.Web.Models
         [Display(Name = "Date of Birth")]
         public DateTime? DateOfBirth { get; set; }
 
+        public string Gender { get; set; }
+
         [MaxLength(100)]
         [Display(Name = "Father Name")]
         public string FatherName { get; set; }
@@ -50,12 +58,12 @@ namespace RentalTracker.Web.Models
         [Display(Name = "Mother Name")]
         public string MotherName { get; set; }
 
-        [MaxLength(100)]
+        [MaxLength(15)]
         [Display(Name = "Contact No")]
         [Required(ErrorMessage = "Please enter contact no")]
         public string ContactNo { get; set; }
 
-        [MaxLength(100)]
+        [MaxLength(15)]
         [Display(Name = "Alternate No")]
         public string AlternateNo { get; set; }
 
@@ -74,10 +82,37 @@ namespace RentalTracker.Web.Models
         [Required(ErrorMessage = "Please enter address")]
         public string PreviousAddress { get; set; }
 
-        [MaxLength(200)]
+        //[Display(Name = "Country")]
+        //[Required(ErrorMessage = "Please choose Country")]
+        //public int? CountryId { get; set; }
+
+        //[ForeignKey("CountryId")]
+        //public Country Country { get; set; }
+
+        //[Display(Name = "State")]
+        //[Required(ErrorMessage = "Please choose State")]
+        //public int? StateId { get; set; }
+
+        //[ForeignKey("CountryId")]
+        //public State State { get; set; }
+
+        [NotMapped]
+        [Display(Name = "Country")]
+        [Required(ErrorMessage = "Please choose Country")]
+        public int? CountryId { get; set; }
+
+        [NotMapped]
+        [Display(Name = "State")]
+        [Required(ErrorMessage = "Please choose State")]
+        public int? StateId { get; set; }
+
         [Display(Name = "City")]
-        [Required(ErrorMessage = "Please select city")]
-        public string City { get; set; }
+        [Required(ErrorMessage = "Please choose City")]
+        public int? CityId { get; set; }
+
+        [ForeignKey("CityId")]
+        public City City  { get; set; }
+
 
         [Display(Name = "Pincode")]
         [Required(ErrorMessage = "Please enter pincode")]
@@ -98,7 +133,7 @@ namespace RentalTracker.Web.Models
         public string DocUrl { get; set; }
 
         [NotMapped]
-        [Display(Name = "Profile Image")]
+        [Display(Name = "Upload Doc")]
         [DataType(DataType.Upload)]
         [AllowedExtensions(new string[] { ".jpg", ".jpeg", ".png" })]
         public IFormFile UploadDoc { get; set; }

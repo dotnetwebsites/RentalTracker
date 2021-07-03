@@ -26,5 +26,6 @@ namespace RentalTracker.Web.Models
         public string ShortName { get; set; }
 
         public ICollection<State> States { get; set; }
+        //public ICollection<TenantMaster> RelatedTenants { get; set; }
     }
 }

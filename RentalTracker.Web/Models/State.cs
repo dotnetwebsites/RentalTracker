@@ -33,6 +33,7 @@ namespace RentalTracker.Web.Models
         public string ShortName { get; set; }
 
         public ICollection<City> Cities { get; set; }
+        //public ICollection<TenantMaster> RelatedTenants { get; set; }
     }
 
     public class StateView : State

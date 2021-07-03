@@ -43,7 +43,7 @@ namespace RentalTracker.Web
 
             services.AddScoped<ITenantService, TenantService>();
             services.AddScoped<IUserService, UserService>();
-            //services.AddScoped<IUserActivity, SqlUserActivity>();
+            services.AddScoped<ICommonService, CommonService>();
 
             //services.AddTransient<IEmailSender, EmailSender>();
 
@@ -69,6 +69,7 @@ namespace RentalTracker.Web
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -29,7 +30,8 @@ namespace RentalTracker.Web.Models
         [Display(Name = "Short Name")]
         [MaxLength(100)]
         [Required(ErrorMessage = "Please enter Short Name")]
-        public string ShortName { get; set; }        
+        public string ShortName { get; set; }
+        public ICollection<TenantMaster> TenantMasters { get; set; }
     }
 
     public class CityView : City

@@ -2,83 +2,199 @@
 
 @{ ViewData["Title"] = "Tenant Master"; }
 
-<form method="post" class="row g-3">
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Home</a></li>
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Tenant">Tenant</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Create</li>
+    </ol>
+</nav>
+
+<form method="post" enctype="multipart/form-data" class="row g-3">
     <div asp-validation-summary="All" class="text-danger"></div>
-    <div class="col-md-4">
+    <div class="form-group col-md-4">
+        <label asp-for="HouseRent" class="form-label required"></label>
+        <input asp-for="HouseRent" class="form-control">
+    </div>
+    <div class="form-group col-md-4">
+        <label asp-for="ReadingPerUnit" class="form-label required"></label>
+        <input asp-for="ReadingPerUnit" class="form-control">
+    </div>
+    <div class="form-group col-md-4">
+        <label asp-for="RentStartOn" class="form-label required"></label>
+        <input asp-for="RentStartOn" class="form-control">
+    </div>
+
+    <div class="form-group col-md-3">
         <label asp-for="FirstName" class="form-label required"></label>
         <input asp-for="FirstName" class="form-control">
     </div>
-    <div class="col-md-4">
+    
+    <div class="form-group col-md-3">
         <label asp-for="MiddleName" class="form-label"></label>
         <input asp-for="MiddleName" class="form-control">
     </div>
-    <div class="col-md-4">
+    <div class="form-group col-md-3">
         <label asp-for="LastName" class="form-label required"></label>
         <input asp-for="LastName" class="form-control">
     </div>
 
-    <div class="col-md-4">
+    <div class="form-group col-md-3">
         <label asp-for="DateOfBirth" class="form-label required"></label>
         <input asp-for="DateOfBirth" class="form-control">
     </div>
-    <div class="col-md-4">
+
+    <div class="form-group col-md-3">
+        <p>Gender</p>
+        <div style="margin: -8px -13px;" class="btn-group col-sm-4" role="group" aria-label="Basic radio toggle button group">
+            <input asp-for="Gender" value="MALE" type="radio" class="btn-check" id="btnradio1" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio1">
+                <i class="fa fa-male" aria-hidden="true"></i>
+            </label>
+
+            <input asp-for="Gender" value="FEMALE" type="radio" class="btn-check" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio2">
+                <i class="fa fa-female" aria-hidden="true"></i>
+            </label>
+
+            <input asp-for="Gender" value="OTHER" type="radio" class="btn-check" id="btnradio3" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio3">
+                <i class="fa fa-transgender" aria-hidden="true"></i>
+            </label>
+        </div>
+    </div>
+
+    <div class="form-group col-md-3">
         <label asp-for="FatherName" class="form-label"></label>
         <input asp-for="FatherName" class="form-control">
     </div>
-    <div class="col-md-4">
+    <div class="form-group col-md-3">
         <label asp-for="MotherName" class="form-label"></label>
         <input asp-for="MotherName" class="form-control">
     </div>
 
-    <div class="col-md-4">
+    <div class="form-group col-md-3">
         <label asp-for="ContactNo" class="form-label required"></label>
         <input asp-for="ContactNo" class="form-control">
     </div>
-    <div class="col-md-4">
+    <div class="form-group col-md-3">
         <label asp-for="AlternateNo" class="form-label"></label>
         <input asp-for="AlternateNo" class="form-control">
     </div>
 
-    <div class="col-md-6">
-        <label for="inputPassword4" class="form-label">Password</label>
-        <input type="password" class="form-control" id="inputPassword4">
-    </div>
-    <div class="col-12">
-        <label for="inputAddress" class="form-label">Address</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-    </div>
-    <div class="col-12">
-        <label for="inputAddress2" class="form-label">Address 2</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-    </div>
-    <div class="col-md-6">
-        <label for="inputCity" class="form-label">City</label>
-        <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="col-md-4">
-        <label for="inputState" class="form-label">State</label>
-        <select id="inputState" class="form-select">
-            <option selected>Choose...</option>
-            <option>...</option>
+    <div class="form-group col-md-3">
+        @Html.LabelFor(model => model.IDType, null, htmlAttributes: new { @class = "form-label" })
+        <select asp-for="IDType" class="form-select">
+            <option value="">--Select ID Type--</option>
+            <option value="AADHAAR">Aadhaar Card</option>
+            <option value="DL">Driving License</option>
+            <option value="GOVT">Government ID</option>
+            <option value="PAN">Pan Card</option>
+            <option value="RATIONCARD">Ration Card</option>
+            <option value="VOTER">Voter Card</option>
+            <option value="OTHER">Other ID Card</option>
         </select>
     </div>
-    <div class="col-md-2">
-        <label for="inputZip" class="form-label">Zip</label>
-        <input type="text" class="form-control" id="inputZip">
+
+    <div class="form-group col-md-3">
+        <label asp-for="IDCardNo" class="form-label"></label>
+        <input asp-for="IDCardNo" class="form-control">
     </div>
-    <div class="col-12">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-                Check me out
-            </label>
-        </div>
+
+    <div class="form-group col-md-3">
+        @Html.LabelFor(model => model.CountryId, null, htmlAttributes: new { @class = "form-label" })
+        @Html.DropDownList("CountryId", null, "--Select Country--", htmlAttributes: new { @class = "form-select" })
     </div>
-    <div class="col-12">
+
+    <div class="form-group col-md-4">
+        <label asp-for="PreviousAddress" class="form-label"></label>
+        <textarea asp-for="PreviousAddress" class="form-control" rows="3"></textarea>
+    </div>
+
+    <div class="form-group col-md-3">
+        @Html.LabelFor(model => model.StateId, null, htmlAttributes: new { @class = "form-label" })
+        @Html.DropDownList("StateId", null, "--Select State--", htmlAttributes: new { @class = "form-select" })
+    </div>
+
+    <div class="form-group col-md-3">
+        @Html.LabelFor(model => model.CityId, null, htmlAttributes: new { @class = "form-label" })
+        <select asp-for="CityId" asp-items="@ViewBag.City" class="form-select">
+            <option value="-1">--Select City--</option>
+        </select>
+    </div>
+
+    <div class="form-group col-md-2">
+        <label asp-for="Pincode" class="form-label"></label>
+        <input asp-for="Pincode" class="form-control">
+    </div>
+
+
+    <div class="col-md-4">
+        <label asp-for="ProfileImage" class="form-label"></label>
+        <input asp-for="ProfileImage" class="form-control" onchange="readURL('target',this);">
+        <img class="bd-placeholder-img img-thumbnail" style="margin: 15px 0px;" src="/images/thumbnail.jpg" width="200" height="200" id="target" alt="Profile Image" />
+    </div>
+
+    <div class="col-md-4">
+        <label asp-for="UploadDoc" class="form-label"></label>
+        <input asp-for="UploadDoc" class="form-control" onchange="readURL('target1',this);">
+        <img class="bd-placeholder-img img-thumbnail" style="margin: 15px 0px;" src="/images/thumbnail.jpg" width="200" height="200" id="target1" alt="Upload Doc" />
+    </div>
+
+    @*<div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Check me out
+                </label>
+            </div>
+        </div>*@
+
+    <div class="d-grid gap-2">
         <button type="submit" class="btn btn-primary">Save</button>
+        <a asp-action="Index" class="btn btn-light">Go Back</a>
     </div>
+
 </form>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        $(document).ready(function(){
+                $("#StateId").change(function(){
+                $("#CityId").empty();
+                $.ajax({
+                    type: 'GET',
+                    url: '@Url.Action("LoadCities")',
+                    dataType:'json',
+                    data:{id: $("#StateId").val() },
+                    success: function(data){
+                        $("#CityId").append('<option value="-1">--Select City--</option>');
+
+                        $.each(data, function(i, d){
+                            $("#CityId").append('<option value="' + d.value +'">' + d.text + '</option>');
+                        });
+                    },
+                    error: function(ex){
+                        console.log(ex);
+                    }
+                });
+            });
+
+        });
+
+        function readURL(id,input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#' + id).attr('src', e.target.result);
+                };
+                reader.readAsDataURL(input.files[0]);
+                dudecmon();
+            }
+        }
+    </script>
+
 }

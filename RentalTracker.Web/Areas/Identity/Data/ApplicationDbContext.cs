@@ -24,6 +24,13 @@ namespace RentalTracker.Web.Areas.Identity.Data
         {
             base.OnModelCreating(builder);
 
+            //builder.Entity<TenantMaster>()
+            //    .HasMany(c => c.TenantRelatedStates)
+            //    .WithMany(t => t.RelatedTenants);
+
+
+            //.WillCascadeOnDelete();
+
             //builder.Entity<Curator>()
             //    .HasIndex(u => new { u.ProfileName })
             //    .IsUnique();
