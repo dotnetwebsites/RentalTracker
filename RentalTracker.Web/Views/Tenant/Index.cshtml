@@ -19,39 +19,43 @@
         <div class="row row-cols-1 row-cols-md-3">
             @foreach (var item in Model)
             {
-                <div class="col">
-                    <div class="card mb-3">
-                        <img class="card-img-top" src="~/images/artist.jpg" alt="Card image cap">
-                        <div class="card-body">
+<div class="col">
+    <div class="card mb-3">
+        <img class="card-img-top" src="~/profileimages/@item.ProfileImageUrl" alt="PrfileImage">
+        <div class="card-body">
 
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                    <h5 class="card-title">Kapil Jain</h5>
-                                </li>
-                                <li class="list-group-item">
-                                    Monthly Rent
-                                    <i class="fa fa-rupee"></i>
-                                    2000
-                                </li>
-                                <li class="list-group-item">
-                                    Rent Start Date
-                                    <i class="fa fa-calendar"></i>
-                                    Jun 9, 2020
-                                </li>
-                                <li class="list-group-item">
-                                    Reading Per Unit
-                                    <i class="fa fa-rupee"></i>
-                                    9
-                                </li>
-                            </ul>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <h5 class="card-title">@item.FullName</h5>
+                </li>
+                <li class="list-group-item">
+                    Monthly Rent
+                    <i class="fa fa-rupee"></i>
+                    @item.HouseRent
+                </li>
+                <li class="list-group-item">
+                    Rent Start Date
+                    <i class="fa fa-calendar"></i>
+                    @item.RentStartOn.ToString("MMM d, yyyy")
+                </li>
+                <li class="list-group-item">
+                    Reading Per Unit
+                    <i class="fa fa-rupee"></i>
+                    @item.ReadingPerUnit
+                </li>
+            </ul>
 
-                        </div>
-                        <div class="card-footer text-center">
-                            <a asp-action="Delete" class="btn btn-danger">Delete</a>
-                            <a asp-action="Edit" class="btn btn-primary">Update</a>
-                        </div>
-                    </div>
-                </div>      }
+        </div>
+        <div class="card-footer text-center">
+            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">
+                <i class="fa fa-trash"></i>
+            </a>
+            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">
+                <i class="fa fa-edit"></i>
+            </a>
+        </div>
+    </div>
+</div>}
         </div>
 
     </div>

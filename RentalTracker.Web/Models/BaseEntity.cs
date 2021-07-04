@@ -27,5 +27,6 @@ namespace RentalTracker.Web.Models
         public string LogMessage { get; set; }
 
         public bool IsActive { get; set; } = true;
+
     }
 }

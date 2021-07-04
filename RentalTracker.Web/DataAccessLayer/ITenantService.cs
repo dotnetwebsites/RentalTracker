@@ -11,9 +11,11 @@ namespace RentalTracker.Web.DAL
         ICollection<TenantMaster> GetAllRecords();
         TenantMaster FindById(int? id);
 
+        Task<TenantMaster> FindAsync(int? id);
+
         //TenantMaster FindPayeeWithTransactions(int? id, DateTime? from = null, DateTime? to = null, bool ascending = true);
         void AddTenant(TenantMaster tenantMaster);
-
+        void UpdateTenant(TenantMaster tenantMaster);
         void RemoveTenant(TenantMaster tenantMaster);
         void SaveTenantChanges();
     }

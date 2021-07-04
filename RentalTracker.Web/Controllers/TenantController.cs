@@ -64,12 +64,99 @@ namespace RentalTracker.Web.Controllers
             return View(model);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return RedirectToAction("Index");
+            }
+
+            TenantMaster model = await _tenantService.FindAsync(id);
+            if (model == null)
+            {
+                return RedirectToAction("Index");
+            }
+
+            City city = await _commonService.CityByIdAsync(model.CityId);
+            State state = await _commonService.StateByIdAsync(city.StateId);
+            Country country = await _commonService.CountryByIdAsync(state.CountryId);
+
+            ViewBag.CountryId = new SelectList(await _commonService.CountryListsAsync(), "CountryId", "CountryName", country.CountryId);
+            ViewBag.StateId = new SelectList(await _commonService.StateListByCountryIdAsync(country.CountryId), "StateId", "StateName", state.StateId);
+            ViewBag.CityId = new SelectList(await _commonService.CityListByStateIdAsync(state.StateId), "CityId", "CityName", city.CityId);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(TenantMaster model)
+        {
+            if (ModelState.IsValid)
+            {
+                model.UpdatedBy = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                model.UpdatedDate = DateTime.Now;
+
+                _tenantService.UpdateTenant(model);
+                _tenantService.SaveTenantChanges();
+
+                return RedirectToAction("Index");
+            }
+
+            City city = await _commonService.CityByIdAsync(model.CityId);
+            State state = await _commonService.StateByIdAsync(city.StateId);
+            Country country = await _commonService.CountryByIdAsync(state.CountryId);
+
+            ViewBag.CountryId = new SelectList(await _commonService.CountryListsAsync(), "CountryId", "CountryName", country.CountryId);
+            ViewBag.StateId = new SelectList(await _commonService.StateListByCountryIdAsync(country.CountryId), "StateId", "StateName", state.StateId);
+            ViewBag.CityId = new SelectList(await _commonService.CityListByStateIdAsync(state.StateId), "CityId", "CityName", city.CityId);
+
+            return View(model);
+        }
+
 
         [HttpGet]
         public async Task<JsonResult> LoadCities(int id)
         {
-            var cities = await _commonService.CityLists(id);
+            var cities = await _commonService.CityListByStateIdAsync(id);
             return Json(new SelectList(cities, "CityId", "CityName"));
         }
+
+        //// POST: ProductMaster/Delete/5
+        //[HttpGet, ActionName("Delete")]
+        //public async Task<ActionResult> DeleteConfirmed(int id)
+        //{
+        //    DynamicMenu dynamicMenu = await db.DynamicMenus.FindAsync(id);
+
+        //    bool exists = db.DynamicMenus.Any(p => p.ParentId == id);
+
+        //    if (!exists)
+        //    {
+        //        var menuroles = await db.AspNetUserRoleMenus.Where(p => p.MenuId == dynamicMenu.Id).ToListAsync();
+
+        //        foreach (var menurole in menuroles)
+        //        {
+        //            db.AspNetUserRoleMenus.Remove(menurole);
+        //            await db.SaveChangesAsync();
+        //        }
+
+        //        db.DynamicMenus.Remove(dynamicMenu);
+        //        await db.SaveChangesAsync();
+
+
+        //        ViewBag.DyId = menuId;
+        //        return RedirectToAction("Index");
+        //    }
+        //    else
+        //    {
+        //        Message.Show(this,
+        //        "You cannot delete this record!",
+        //        "Sub menu already added with this records, please delete those records and try again.",
+        //        MessageType.warning);
+
+        //        var menulists = await this.LoadAsync();
+        //        return View("Index", menulists);
+        //    }
+        //}
     }
 }

@@ -1,17 +1,20 @@
 ﻿@model TenantMaster
 
-@{ ViewData["Title"] = "Create"; }
+@{ ViewData["Title"] = "Edit"; }
 
 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Home</a></li>
         <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Tenant">Tenant</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Create</li>
+        <li class="breadcrumb-item active" aria-current="page">Edit</li>
     </ol>
 </nav>
 
-<form method="post" enctype="multipart/form-data" class="row g-3">
+<form method="POST" enctype="multipart/form-data" class="row g-3">
     <div asp-validation-summary="All" class="text-danger"></div>
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.Id)
+
     <div class="form-group col-md-4">
         <label asp-for="HouseRent" class="form-label required"></label>
         <input asp-for="HouseRent" class="form-control">
@@ -128,21 +131,33 @@
         <input asp-for="Pincode" class="form-control">
     </div>
 
+    @{ var imgPath = Model.ProfileImageUrl == null ? "/images/thumbnail.jpg" : "/" + Directories.profileimages + "/" + Model.ProfileImageUrl;
+       var docImgPath = Model.DocUrl == null ? "/images/thumbnail.jpg" : "/" + Directories.documents + "/" + Model.DocUrl;         
+     }
 
     <div class="col-md-4">
         <label asp-for="ProfileImage" class="form-label"></label>
         <input asp-for="ProfileImage" class="form-control" onchange="readURL('target',this);">
-        <img class="bd-placeholder-img img-thumbnail" style="margin: 15px 0px;" src="/images/thumbnail.jpg" width="200" height="200" id="target" alt="Profile Image" />
+        <img class="bd-placeholder-img img-thumbnail" style="margin: 15px 0px;" src="@imgPath" width="200" height="200" id="target" alt="Profile Image" />
     </div>
 
     <div class="col-md-4">
         <label asp-for="UploadDoc" class="form-label"></label>
-        <input asp-for="UploadDoc" class="form-control" onchange="readURL('target1',this);">
-        <img class="bd-placeholder-img img-thumbnail" style="margin: 15px 0px;" src="/images/thumbnail.jpg" width="200" height="200" id="target1" alt="Upload Doc" />
+        <input asp-for="UploadDoc" class="form-control" onchange="readURL('target1',this);">        
+        <iframe style="margin: 15px 0px;" class="bd-placeholder-img img-thumbnail" src="@docImgPath" frameborder="0" width="400" height="600" allow="encrypted-media" id="target1" alt="Upload Doc"></iframe>
+    </div>
+
+    <div class="col-12">
+        <div class="form-check">
+            <input asp-for="IsActive" class="form-check-input">
+            <label asp-for="IsActive" class="form-check-label">
+                IsActive
+            </label>
+        </div>
     </div>
 
     <div class="d-grid gap-2">
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-primary">Update</button>
         <a asp-action="Index" class="btn btn-light">Go Back</a>
     </div>
 
