@@ -48,6 +48,7 @@ namespace RentalTracker.Web.Models
         [Display(Name = "Date of Birth")]
         public DateTime? DateOfBirth { get; set; }
 
+        [Required(ErrorMessage = "Please choose gender")]
         public string Gender { get; set; }
 
         [MaxLength(100)]
@@ -58,12 +59,12 @@ namespace RentalTracker.Web.Models
         [Display(Name = "Mother Name")]
         public string MotherName { get; set; }
 
-        [MaxLength(15)]
-        [Display(Name = "Contact No")]
+        [MaxLength(10)]
+        [Display(Name = "Mobile No")]
         [Required(ErrorMessage = "Please enter contact no")]
         public string ContactNo { get; set; }
 
-        [MaxLength(15)]
+        [MaxLength(12)]
         [Display(Name = "Alternate No")]
         public string AlternateNo { get; set; }
 
@@ -111,7 +112,7 @@ namespace RentalTracker.Web.Models
         public int? CityId { get; set; }
 
         [ForeignKey("CityId")]
-        public City City  { get; set; }
+        public City City { get; set; }
 
 
         [Display(Name = "Pincode")]
@@ -135,7 +136,7 @@ namespace RentalTracker.Web.Models
         [NotMapped]
         [Display(Name = "Upload Doc")]
         [DataType(DataType.Upload)]
-        [AllowedExtensions(new string[] { ".jpg", ".jpeg", ".png" })]
+        [AllowedExtensions(new string[] { ".jpg", ".jpeg", ".png", ".pdf" })]
         public IFormFile UploadDoc { get; set; }
 
         [NotMapped]

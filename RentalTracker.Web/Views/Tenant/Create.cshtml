@@ -29,7 +29,7 @@
         <label asp-for="FirstName" class="form-label required"></label>
         <input asp-for="FirstName" class="form-control">
     </div>
-    
+
     <div class="form-group col-md-3">
         <label asp-for="MiddleName" class="form-label"></label>
         <input asp-for="MiddleName" class="form-control">
@@ -74,16 +74,16 @@
     </div>
 
     <div class="form-group col-md-3">
-        <label asp-for="ContactNo" class="form-label required"></label>
+        <label asp-for="ContactNo" class="form-label required"></label><i style="color: gray; font-size: x-small;"> ( (Accept only 10 digit mobile no))</i>
         <input asp-for="ContactNo" class="form-control">
     </div>
     <div class="form-group col-md-3">
-        <label asp-for="AlternateNo" class="form-label"></label>
+        <label asp-for="AlternateNo" class="form-label"></label><i style="color: gray; font-size: x-small;">  (Accept upto 12 digit no)</i>
         <input asp-for="AlternateNo" class="form-control">
     </div>
 
     <div class="form-group col-md-3">
-        @Html.LabelFor(model => model.IDType, null, htmlAttributes: new { @class = "form-label" })
+        @Html.LabelFor(model => model.IDType, null, htmlAttributes: new { @class = "form-label required" })
         <select asp-for="IDType" class="form-select">
             <option value="">--Select ID Type--</option>
             <option value="AADHAAR">Aadhaar Card</option>
@@ -97,34 +97,34 @@
     </div>
 
     <div class="form-group col-md-3">
-        <label asp-for="IDCardNo" class="form-label"></label>
+        <label asp-for="IDCardNo" class="form-label required"></label>
         <input asp-for="IDCardNo" class="form-control">
     </div>
 
     <div class="form-group col-md-3">
-        @Html.LabelFor(model => model.CountryId, null, htmlAttributes: new { @class = "form-label" })
+        @Html.LabelFor(model => model.CountryId, null, htmlAttributes: new { @class = "form-label required" })
         @Html.DropDownList("CountryId", null, "--Select Country--", htmlAttributes: new { @class = "form-select" })
     </div>
 
     <div class="form-group col-md-4">
-        <label asp-for="PreviousAddress" class="form-label"></label>
+        <label asp-for="PreviousAddress" class="form-label required"></label>
         <textarea asp-for="PreviousAddress" class="form-control" rows="3"></textarea>
     </div>
 
     <div class="form-group col-md-3">
-        @Html.LabelFor(model => model.StateId, null, htmlAttributes: new { @class = "form-label" })
+        @Html.LabelFor(model => model.StateId, null, htmlAttributes: new { @class = "form-label required" })
         @Html.DropDownList("StateId", null, "--Select State--", htmlAttributes: new { @class = "form-select" })
     </div>
 
     <div class="form-group col-md-3">
-        @Html.LabelFor(model => model.CityId, null, htmlAttributes: new { @class = "form-label" })
+        @Html.LabelFor(model => model.CityId, null, htmlAttributes: new { @class = "form-label required" })
         <select asp-for="CityId" asp-items="@ViewBag.City" class="form-select">
-            <option value="-1">--Select City--</option>
+            <option value="">--Select City--</option>
         </select>
     </div>
 
     <div class="form-group col-md-2">
-        <label asp-for="Pincode" class="form-label"></label>
+        <label asp-for="Pincode" class="form-label required"></label>
         <input asp-for="Pincode" class="form-control">
     </div>
 
@@ -170,7 +170,7 @@
                     dataType:'json',
                     data:{id: $("#StateId").val() },
                     success: function(data){
-                        $("#CityId").append('<option value="-1">--Select City--</option>');
+                        $("#CityId").append('<option value="">--Select City--</option>');
 
                         $.each(data, function(i, d){
                             $("#CityId").append('<option value="' + d.value +'">' + d.text + '</option>');

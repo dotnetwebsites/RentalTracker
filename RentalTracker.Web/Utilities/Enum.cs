@@ -16,6 +16,12 @@ public enum Act
     LOGOUT
 }
 
+public enum Directories
+{
+    profileimages,
+    documents
+}
+
 public enum SortCurators
 {
     NoSort = 1,

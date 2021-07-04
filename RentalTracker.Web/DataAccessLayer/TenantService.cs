@@ -1,4 +1,5 @@
-﻿using RentalTracker.Web.Areas.Identity.Data;
+﻿using Microsoft.AspNetCore.Hosting;
+using RentalTracker.Web.Areas.Identity.Data;
 using RentalTracker.Web.Models;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,16 @@ namespace RentalTracker.Web.DAL
     public class TenantService : ITenantService
     {
         private readonly ApplicationDbContext _repository;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly ICommonService _commonService;
 
-        public TenantService(ApplicationDbContext repository)
+        public TenantService(ApplicationDbContext repository,
+                            IWebHostEnvironment webHostEnvironment,
+                            ICommonService commonService)
         {
             _repository = repository;
+            _webHostEnvironment = webHostEnvironment;
+            _commonService = commonService;
         }
 
         public TenantMaster FindById(int? id)
@@ -24,16 +31,20 @@ namespace RentalTracker.Web.DAL
             return _repository.TenantMasters.ToList();
         }
 
-        public void SaveTenant(TenantMaster tenantMaster)
+        public void SaveTenantChanges()
         {
-            _repository.TenantMasters.Add(tenantMaster);
             _repository.SaveChanges();
         }
 
-        public void UpdateTenant(TenantMaster tenantMaster)
+        public void AddTenant(TenantMaster tenantMaster)
         {
-            //_repository.Entry(tenantMaster).State = EntityState.Modified;
-            _repository.SaveChanges();
+            tenantMaster.ProfileImageUrl = _commonService.UploadedFile(tenantMaster.ProfileImageUrl, tenantMaster.ProfileImage, Directories.profileimages);
+            tenantMaster.DocUrl = _commonService.UploadedFile(tenantMaster.DocUrl, tenantMaster.UploadDoc, Directories.documents);
+            _repository.TenantMasters.Add(tenantMaster);
+        }
+
+        public void RemoveTenant(TenantMaster tenantMaster)
+        {
         }
     }
 }

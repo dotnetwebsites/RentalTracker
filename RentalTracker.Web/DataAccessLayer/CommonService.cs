@@ -1,7 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using RentalTracker.Web.Areas.Identity.Data;
 using RentalTracker.Web.Models;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -10,10 +14,13 @@ namespace RentalTracker.Web.DAL
     public class CommonService : ICommonService
     {
         private readonly ApplicationDbContext _repository;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public CommonService(ApplicationDbContext repository)
+        public CommonService(ApplicationDbContext repository,
+                            IWebHostEnvironment webHostEnvironment)
         {
             _repository = repository;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         public async Task<City> CityById(int? id)
@@ -88,5 +95,53 @@ namespace RentalTracker.Web.DAL
                 return await _repository.Cities.Where(p => p.StateId == stateId).ToListAsync();
         }
 
+        public void DeleteFileIfExists(string fileUrl, Directories directories)
+        {
+            if (fileUrl != null)
+            {
+                var path = fileUrl == null ? null :
+                    Path.Combine(_webHostEnvironment.WebRootPath, directories.ToString() + "/", fileUrl);
+
+                if (System.IO.File.Exists(path))
+                {
+                    System.IO.File.Delete(path);
+                }
+            }
+        }
+
+        public string UploadedFile(string Url, IFormFile formFile, Directories directoryName)
+        {
+            if (Url != null)
+            {
+                var path = Url == null ? null :
+                    Path.Combine(_webHostEnvironment.WebRootPath, directoryName.ToString() + "/", Url);
+
+                if (File.Exists(path))
+                {
+                    File.Delete(path);
+                }
+            }
+
+            string uniqueFileName = null;
+
+            if (formFile != null)
+            {
+                string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, directoryName.ToString() + "/");
+
+                if (!Directory.Exists(uploadsFolder))
+                    Directory.CreateDirectory(uploadsFolder);
+
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + formFile.FileName;
+
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    formFile.CopyTo(fileStream);
+                }
+            }
+
+            return uniqueFileName;
+        }
     }
 }

@@ -12,9 +12,9 @@ namespace RentalTracker.Web.DAL
         TenantMaster FindById(int? id);
 
         //TenantMaster FindPayeeWithTransactions(int? id, DateTime? from = null, DateTime? to = null, bool ascending = true);
-        void SaveTenant(TenantMaster tenantMaster);
+        void AddTenant(TenantMaster tenantMaster);
 
-        void UpdateTenant(TenantMaster tenantMaster);
-
+        void RemoveTenant(TenantMaster tenantMaster);
+        void SaveTenantChanges();
     }
 }

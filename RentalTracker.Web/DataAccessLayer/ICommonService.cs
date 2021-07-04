@@ -1,13 +1,15 @@
-﻿using RentalTracker.Web.Models;
-using System;
+﻿using Microsoft.AspNetCore.Http;
+using RentalTracker.Web.Models;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace RentalTracker.Web.DAL
 {
     public interface ICommonService
     {
+        void DeleteFileIfExists(string fileUrl, Directories directories);
+        string UploadedFile(string Url, IFormFile formFile, Directories directoryName);
+
         ICollection<Country> CountryLists();
         Task<ICollection<Country>> CountryListsAsync();
 

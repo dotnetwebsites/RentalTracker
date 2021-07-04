@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using RentalTracker.Web.Areas.Identity.Data;
+using RentalTracker.Web.Models;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,16 +10,17 @@ namespace RentalTracker.Web.DAL
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
-
         public UserService(UserManager<ApplicationUser> userManager,
-                            RoleManager<IdentityRole> roleManager)
+                    RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _roleManager = roleManager;
         }
 
-        public async Task<IdentityResult> CreateInitialUser()
+        public async Task<UserIdentityResult> CreateInitialUser()
         {
+            UserIdentityResult res = new UserIdentityResult();
+
             var user = new ApplicationUser
             {
                 UserName = "admin",
@@ -30,7 +32,8 @@ namespace RentalTracker.Web.DAL
 
             if (u == true)
             {
-                return null;
+                res.Message = "Admin user already exists.";
+                return res;
             }
 
             var result = await _userManager.CreateAsync(user, "India@123");
@@ -38,9 +41,19 @@ namespace RentalTracker.Web.DAL
             {
                 await AddRoleToSpecificUser(user, "superadmin");
                 await AddRoleToSpecificUser(user, "admin");
+
+                var cUser = await _userManager.FindByNameAsync(user.UserName);
+
+                res.Message = "User has been created.";
+                res.CreatedUser = cUser;
+
+                return res;
             }
 
-            return result;
+            if (!result.Succeeded)
+                res.Message = "Error 1000 : Something went wrong, please contact administrator.";
+
+            return res;
         }
 
         public async Task AddRoleToSpecificUser(ApplicationUser user, string RoleName)
@@ -67,6 +80,5 @@ namespace RentalTracker.Web.DAL
             }
 
         }
-
     }
 }

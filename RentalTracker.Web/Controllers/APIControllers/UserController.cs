@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using RentalTracker.Web.DAL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using RentalTracker.Web.Models;
 using System.Threading.Tasks;
 
 namespace RentalTracker.Web.Controllers.APIControllers
@@ -20,15 +17,10 @@ namespace RentalTracker.Web.Controllers.APIControllers
 
         [AllowAnonymous]
         [Route("api/user/createadminuser")]
-        public async Task<IdentityResult> Index()
+        public async Task<UserIdentityResult> Index()
         {
-            var result = await _userService.CreateInitialUser();
-            if (result != null)
-            {
-                return result;
-            }
-
-            return null;
+            var result = await _userService.CreateInitialUser();            
+            return result;
         }
     }
 }

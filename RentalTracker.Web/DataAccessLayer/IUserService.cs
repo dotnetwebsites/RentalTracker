@@ -1,12 +1,12 @@
-﻿using Microsoft.AspNetCore.Identity;
-using RentalTracker.Web.Areas.Identity.Data;
+﻿using RentalTracker.Web.Areas.Identity.Data;
+using RentalTracker.Web.Models;
 using System.Threading.Tasks;
 
 namespace RentalTracker.Web.DAL
 {
     public interface IUserService
     {
-        Task<IdentityResult> CreateInitialUser();
+        Task<UserIdentityResult> CreateInitialUser();
 
         Task AddRoleToSpecificUser(ApplicationUser user, string RoleName);
     }

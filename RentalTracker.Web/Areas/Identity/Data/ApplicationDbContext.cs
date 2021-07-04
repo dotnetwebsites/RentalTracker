@@ -19,6 +19,7 @@ namespace RentalTracker.Web.Areas.Identity.Data
         public DbSet<Country> Countries { get; set; }
         public DbSet<State> States { get; set; }
         public DbSet<City> Cities { get; set; }
+        public DbSet<MailLibrary> MailLibraries { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -38,12 +39,6 @@ namespace RentalTracker.Web.Areas.Identity.Data
             builder.Seed();
         }
 
-        //public DbSet<MailLibrary> MailLibraries { get; set; }
-
     }
 
 }
-
-//context.Countries.AddOrUpdate(p => p.CountryName, new Models.Country { CountryId = 1, CountryCode = "IN", CountryName = "India", ShortName = "IND", CreatedBy = "SystemGenerated" });
-
-//context.States.AddOrUpdate(p => p.StateName, new Models.State { StateId = 1, CountryId = 1, StateCode = "MP", StateName = "Madhya Prades", ShortName = "MP", CreatedBy = "SystemGenerated" });

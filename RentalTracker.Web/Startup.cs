@@ -44,6 +44,7 @@ namespace RentalTracker.Web
             services.AddScoped<ITenantService, TenantService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ICommonService, CommonService>();
+            services.AddScoped<IAppService, AppService>();
 
             //services.AddTransient<IEmailSender, EmailSender>();
 
@@ -74,10 +75,6 @@ namespace RentalTracker.Web
 
             app.UseEndpoints(endpoints =>
             {
-                //endpoints.MapControllerRoute(
-                //    name: "default",
-                //    pattern: "{controller=Home}/{action=Index}/{id?}");
-
                 endpoints.MapControllerRoute(
                    name: "area",
                    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}",
@@ -88,6 +85,7 @@ namespace RentalTracker.Web
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
         }
     }
 }
