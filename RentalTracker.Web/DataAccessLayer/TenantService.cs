@@ -25,7 +25,7 @@ namespace RentalTracker.Web.DAL
 
         public TenantMaster FindById(int? id)
         {
-            return _repository.TenantMasters.FirstOrDefault(p => p.Id == id);
+            return _repository.TenantMasters.FirstOrDefault(p => p.TenantId == id);
         }
 
         public async Task<TenantMaster> FindAsync(int? id)
@@ -52,7 +52,7 @@ namespace RentalTracker.Web.DAL
 
         public void UpdateTenant(TenantMaster tenantMaster)
         {
-            TenantMaster model = _repository.TenantMasters.Find(tenantMaster.Id);
+            TenantMaster model = _repository.TenantMasters.Find(tenantMaster.TenantId);
 
             model.HouseRent = tenantMaster.HouseRent;
             model.ReadingPerUnit = tenantMaster.ReadingPerUnit;

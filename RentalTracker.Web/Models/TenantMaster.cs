@@ -11,7 +11,7 @@ namespace RentalTracker.Web.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int TenantId { get; set; }
 
         //public virtual ICollection<Country> TenantRelatedCountries { get; set; }
         //public virtual ICollection<State> TenantRelatedStates { get; set; }
@@ -24,6 +24,10 @@ namespace RentalTracker.Web.Models
         [Required(ErrorMessage = "Please enter reading per unit")]
         [Display(Name = "Meter Reading Per Unit")]
         public int ReadingPerUnit { get; set; }
+
+        [Required(ErrorMessage = "Please enter starting reading unit")]
+        [Display(Name = "Starting Reading Unit")]
+        public int StartReading { get; set; }
 
         [DataType(DataType.Date)]
         [Required(ErrorMessage = "Rent start date required")]
@@ -151,5 +155,6 @@ namespace RentalTracker.Web.Models
             }
         }
 
+        public ICollection<Rent> Rents { get; set; }
     }
 }

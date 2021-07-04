@@ -15,6 +15,7 @@ namespace RentalTracker.Web.Areas.Identity.Data
 
         public DbSet<AspNetUserRoleMenu> AspNetUserRoleMenus { get; set; }
         public DbSet<TenantMaster> TenantMasters { get; set; }
+        public DbSet<Rent> Rents { get; set; }
 
         public DbSet<Country> Countries { get; set; }
         public DbSet<State> States { get; set; }

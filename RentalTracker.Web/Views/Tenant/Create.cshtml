@@ -12,15 +12,19 @@
 
 <form method="post" enctype="multipart/form-data" class="row g-3">
     <div asp-validation-summary="All" class="text-danger"></div>
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-3">
         <label asp-for="HouseRent" class="form-label required"></label>
         <input asp-for="HouseRent" class="form-control">
     </div>
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-3">
         <label asp-for="ReadingPerUnit" class="form-label required"></label>
         <input asp-for="ReadingPerUnit" class="form-control">
     </div>
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-3">
+        <label asp-for="StartReading" class="form-label required"></label>
+        <input asp-for="StartReading" class="form-control">
+    </div>
+    <div class="form-group col-md-3">
         <label asp-for="RentStartOn" class="form-label required"></label>
         <input asp-for="RentStartOn" class="form-control">
     </div>

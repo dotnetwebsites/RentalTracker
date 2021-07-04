@@ -19,9 +19,11 @@
         <div class="row row-cols-1 row-cols-md-3">
             @foreach (var item in Model)
             {
+                var imgPath = item.ProfileImageUrl == null ? "/images/thumbnail.jpg" : "/" + Directories.profileimages + "/" + item.ProfileImageUrl;
+
 <div class="col">
     <div class="card mb-3">
-        <img class="card-img-top" src="~/profileimages/@item.ProfileImageUrl" alt="PrfileImage">
+        <img height="200" width="200" class="card-img-top" src="@imgPath" alt="PrfileImage">
         <div class="card-body">
 
             <ul class="list-group list-group-flush">
@@ -47,10 +49,10 @@
 
         </div>
         <div class="card-footer text-center">
-            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">
+            <a asp-action="Delete" onclick="return DeleteConfirm();" asp-route-id="@item.TenantId" class="btn btn-danger">
                 <i class="fa fa-trash"></i>
             </a>
-            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">
+            <a asp-action="Edit" asp-route-id="@item.TenantId" class="btn btn-primary">
                 <i class="fa fa-edit"></i>
             </a>
         </div>

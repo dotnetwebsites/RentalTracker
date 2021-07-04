@@ -122,41 +122,16 @@ namespace RentalTracker.Web.Controllers
             return Json(new SelectList(cities, "CityId", "CityName"));
         }
 
-        //// POST: ProductMaster/Delete/5
-        //[HttpGet, ActionName("Delete")]
-        //public async Task<ActionResult> DeleteConfirmed(int id)
-        //{
-        //    DynamicMenu dynamicMenu = await db.DynamicMenus.FindAsync(id);
+        [Authorize(Roles = "admin")]
+        [HttpGet, ActionName("Delete")]
+        public async Task<ActionResult> DeleteConfirmed(int id)
+        {
+            TenantMaster tenantMaster = await _tenantService.FindAsync(id);
 
-        //    bool exists = db.DynamicMenus.Any(p => p.ParentId == id);
+            _tenantService.RemoveTenant(tenantMaster);
+            _tenantService.SaveTenantChanges();
 
-        //    if (!exists)
-        //    {
-        //        var menuroles = await db.AspNetUserRoleMenus.Where(p => p.MenuId == dynamicMenu.Id).ToListAsync();
-
-        //        foreach (var menurole in menuroles)
-        //        {
-        //            db.AspNetUserRoleMenus.Remove(menurole);
-        //            await db.SaveChangesAsync();
-        //        }
-
-        //        db.DynamicMenus.Remove(dynamicMenu);
-        //        await db.SaveChangesAsync();
-
-
-        //        ViewBag.DyId = menuId;
-        //        return RedirectToAction("Index");
-        //    }
-        //    else
-        //    {
-        //        Message.Show(this,
-        //        "You cannot delete this record!",
-        //        "Sub menu already added with this records, please delete those records and try again.",
-        //        MessageType.warning);
-
-        //        var menulists = await this.LoadAsync();
-        //        return View("Index", menulists);
-        //    }
-        //}
+            return RedirectToAction("Index");
+        }
     }
 }

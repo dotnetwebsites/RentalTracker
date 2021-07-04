@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using RentalTracker.Web.DAL;
 using RentalTracker.Web.Models;
 using System.Diagnostics;
 
@@ -10,15 +11,18 @@ namespace RentalTracker.Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ITenantService _tenantService;
+
+        public HomeController(ILogger<HomeController> logger, ITenantService tenantService)
         {
-            _logger = logger;            
+            _logger = logger;
+            _tenantService = tenantService;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var tenants = _tenantService.GetAllRecords();
+            return View(tenants);
         }
 
         public IActionResult Privacy()

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RentalTracker.Web.Areas.Identity.Data;
 
 namespace RentalTracker.Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210704190426_startreading")]
+    partial class startreading
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -297,7 +299,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "1",
                             CityName = "Port Blair",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(6961),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(8615),
                             IsActive = true,
                             ShortName = "PB",
                             StateId = 1
@@ -308,7 +310,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "2",
                             CityName = "Vishakhapatnam",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9476),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(584),
                             IsActive = true,
                             ShortName = "VSKP",
                             StateId = 2
@@ -319,7 +321,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "3",
                             CityName = "Vijayawada",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9496),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(596),
                             IsActive = true,
                             ShortName = "BZA",
                             StateId = 2
@@ -330,7 +332,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "4",
                             CityName = "Guntur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9501),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(599),
                             IsActive = true,
                             ShortName = "GNT",
                             StateId = 2
@@ -341,7 +343,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "5",
                             CityName = "Nellore",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9506),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(602),
                             IsActive = true,
                             ShortName = "NLR",
                             StateId = 2
@@ -352,7 +354,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "6",
                             CityName = "Kurnool",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9510),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(604),
                             IsActive = true,
                             ShortName = "KRNT",
                             StateId = 2
@@ -363,7 +365,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "7",
                             CityName = "Kakinada",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9514),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(606),
                             IsActive = true,
                             ShortName = "CCT",
                             StateId = 2
@@ -374,7 +376,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "8",
                             CityName = "Cuddapah",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9519),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(608),
                             IsActive = true,
                             ShortName = "HX",
                             StateId = 2
@@ -385,7 +387,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "9",
                             CityName = "Rajahmundry",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9524),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(609),
                             IsActive = true,
                             ShortName = "RJY",
                             StateId = 2
@@ -396,7 +398,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "10",
                             CityName = "Tirupati",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9529),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(611),
                             IsActive = true,
                             ShortName = "TPTY",
                             StateId = 2
@@ -407,7 +409,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "11",
                             CityName = "Anantapur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9534),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(613),
                             IsActive = true,
                             ShortName = "ATP",
                             StateId = 2
@@ -418,7 +420,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "12",
                             CityName = "Ongole",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9558),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(616),
                             IsActive = true,
                             ShortName = "OGL",
                             StateId = 2
@@ -429,7 +431,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "13",
                             CityName = "Vizianagaram",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9567),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(618),
                             IsActive = true,
                             ShortName = "VZM",
                             StateId = 2
@@ -440,7 +442,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "14",
                             CityName = "Itanagar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9571),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(621),
                             IsActive = true,
                             ShortName = "ITN",
                             StateId = 3
@@ -451,7 +453,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "15",
                             CityName = "Dispur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9576),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(624),
                             IsActive = true,
                             ShortName = "DSP",
                             StateId = 4
@@ -462,7 +464,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "16",
                             CityName = "Guwahati",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9581),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(626),
                             IsActive = true,
                             ShortName = "GHY",
                             StateId = 4
@@ -473,7 +475,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "17",
                             CityName = "Patna",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9584),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(628),
                             IsActive = true,
                             ShortName = "PNBE",
                             StateId = 5
@@ -484,7 +486,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "18",
                             CityName = "Gaya",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9588),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(630),
                             IsActive = true,
                             ShortName = "GAYA",
                             StateId = 5
@@ -495,7 +497,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "19",
                             CityName = "Bhagalpur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9593),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(632),
                             IsActive = true,
                             ShortName = "BGP",
                             StateId = 5
@@ -506,7 +508,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "20",
                             CityName = "Muzaffarpur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9598),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(634),
                             IsActive = true,
                             ShortName = "MFP",
                             StateId = 5
@@ -517,7 +519,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "21",
                             CityName = "Purnea",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9605),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(637),
                             IsActive = true,
                             ShortName = "PRNA",
                             StateId = 5
@@ -528,7 +530,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "22",
                             CityName = "Begusarai",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9609),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(639),
                             IsActive = true,
                             ShortName = "BGS",
                             StateId = 5
@@ -539,7 +541,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "23",
                             CityName = "Chandigarh",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9611),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(641),
                             IsActive = true,
                             ShortName = "CDG",
                             StateId = 6
@@ -550,7 +552,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "24",
                             CityName = "Bhilai",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9614),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(643),
                             IsActive = true,
                             ShortName = "BIA",
                             StateId = 7
@@ -561,7 +563,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "25",
                             CityName = "Raipur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9616),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(645),
                             IsActive = true,
                             ShortName = "R",
                             StateId = 7
@@ -572,7 +574,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "26",
                             CityName = "Bilaspur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9620),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(647),
                             IsActive = true,
                             ShortName = "BSP",
                             StateId = 7
@@ -583,7 +585,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "27",
                             CityName = "Drug",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9623),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(649),
                             IsActive = true,
                             ShortName = "DURG",
                             StateId = 7
@@ -594,7 +596,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "28",
                             CityName = "Delhi",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9625),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(654),
                             IsActive = true,
                             ShortName = "DLI",
                             StateId = 8
@@ -605,7 +607,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "29",
                             CityName = "New Delhi",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9628),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(656),
                             IsActive = true,
                             ShortName = "NDLS",
                             StateId = 8
@@ -616,7 +618,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "30",
                             CityName = "Panaji",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9630),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(658),
                             IsActive = true,
                             ShortName = "PANA",
                             StateId = 9
@@ -627,7 +629,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "31",
                             CityName = "Ahmadabad",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9632),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(662),
                             IsActive = true,
                             ShortName = "ADI",
                             StateId = 10
@@ -638,7 +640,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "32",
                             CityName = "Surat",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9634),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(664),
                             IsActive = true,
                             ShortName = "ST",
                             StateId = 10
@@ -649,7 +651,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "33",
                             CityName = "Vadodara",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9637),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(666),
                             IsActive = true,
                             ShortName = "BRC",
                             StateId = 10
@@ -660,7 +662,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "34",
                             CityName = "Rajkot",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9639),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(668),
                             IsActive = true,
                             ShortName = "RJT",
                             StateId = 10
@@ -671,7 +673,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "35",
                             CityName = "Bhavnagar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9641),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(670),
                             IsActive = true,
                             ShortName = "BVC",
                             StateId = 10
@@ -682,7 +684,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "36",
                             CityName = "Jamnagar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9643),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(672),
                             IsActive = true,
                             ShortName = "JAM",
                             StateId = 10
@@ -693,7 +695,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "37",
                             CityName = "Bhuj",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9646),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(675),
                             IsActive = true,
                             ShortName = "BHUJ",
                             StateId = 10
@@ -704,7 +706,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "38",
                             CityName = "Porbandar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9648),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(677),
                             IsActive = true,
                             ShortName = "PBR",
                             StateId = 10
@@ -715,7 +717,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "39",
                             CityName = "Ghandinagar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9651),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(692),
                             IsActive = true,
                             ShortName = "GNC",
                             StateId = 10
@@ -726,7 +728,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "40",
                             CityName = "Daman",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9653),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(694),
                             IsActive = true,
                             ShortName = "VRL",
                             StateId = 10
@@ -737,7 +739,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "41",
                             CityName = "Faridabad",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9655),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(696),
                             IsActive = true,
                             ShortName = "FDB",
                             StateId = 11
@@ -748,7 +750,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "42",
                             CityName = "Rohtak",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9658),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(699),
                             IsActive = true,
                             ShortName = "ROK",
                             StateId = 11
@@ -759,7 +761,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "43",
                             CityName = "Hisar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9660),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(700),
                             IsActive = true,
                             ShortName = "HSR",
                             StateId = 11
@@ -770,7 +772,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "44",
                             CityName = "Panipat",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9663),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(702),
                             IsActive = true,
                             ShortName = "PNP",
                             StateId = 11
@@ -781,7 +783,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "45",
                             CityName = "Sonipat",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9665),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(705),
                             IsActive = true,
                             ShortName = "SNP",
                             StateId = 11
@@ -792,7 +794,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "46",
                             CityName = "Karnal",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9667),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(707),
                             IsActive = true,
                             ShortName = "KUN",
                             StateId = 11
@@ -803,7 +805,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "47",
                             CityName = "Panchkula",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9669),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(710),
                             IsActive = true,
                             ShortName = "PANCH",
                             StateId = 11
@@ -814,7 +816,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "48",
                             CityName = "Shimla",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9672),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(712),
                             IsActive = true,
                             ShortName = "SML",
                             StateId = 12
@@ -825,7 +827,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "49",
                             CityName = "Srinagar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9675),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(714),
                             IsActive = true,
                             ShortName = "SINA",
                             StateId = 13
@@ -836,7 +838,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "50",
                             CityName = "Jammu",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9678),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(716),
                             IsActive = true,
                             ShortName = "JAT",
                             StateId = 13
@@ -847,7 +849,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "51",
                             CityName = "Handwara",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9680),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(718),
                             IsActive = true,
                             ShortName = "HAND",
                             StateId = 13
@@ -858,7 +860,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "52",
                             CityName = "Jamshedpur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9682),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(720),
                             IsActive = true,
                             ShortName = "JAMS",
                             StateId = 14
@@ -869,7 +871,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "53",
                             CityName = "Dhanbad",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9684),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(722),
                             IsActive = true,
                             ShortName = "DHN",
                             StateId = 14
@@ -880,7 +882,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "54",
                             CityName = "Ranchi",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9687),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(724),
                             IsActive = true,
                             ShortName = "RNC",
                             StateId = 14
@@ -891,7 +893,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "55",
                             CityName = "Bangalore",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9691),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(726),
                             IsActive = true,
                             ShortName = "BNC",
                             StateId = 15
@@ -902,7 +904,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "56",
                             CityName = "Mysore",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9693),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(728),
                             IsActive = true,
                             ShortName = "MYS",
                             StateId = 15
@@ -913,7 +915,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "57",
                             CityName = "Hubli",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9695),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(730),
                             IsActive = true,
                             ShortName = "UBL",
                             StateId = 15
@@ -924,7 +926,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "58",
                             CityName = "Shimoga",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9698),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(732),
                             IsActive = true,
                             ShortName = "SHIM",
                             StateId = 15
@@ -935,7 +937,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "59",
                             CityName = "Mangalore",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9702),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(734),
                             IsActive = true,
                             ShortName = "MAQ",
                             StateId = 15
@@ -946,7 +948,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "60",
                             CityName = "Davangere",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9704),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(737),
                             IsActive = true,
                             ShortName = "DVG",
                             StateId = 15
@@ -957,7 +959,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "61",
                             CityName = "Belgaum",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9707),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(739),
                             IsActive = true,
                             ShortName = "BLG",
                             StateId = 15
@@ -968,7 +970,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "62",
                             CityName = "Gulbarga",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9719),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(741),
                             IsActive = true,
                             ShortName = "GR",
                             StateId = 15
@@ -979,7 +981,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "63",
                             CityName = "Bellary",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9722),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(743),
                             IsActive = true,
                             ShortName = "BAY",
                             StateId = 15
@@ -990,7 +992,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "64",
                             CityName = "Tumkur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9724),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(746),
                             IsActive = true,
                             ShortName = "Tumkur",
                             StateId = 15
@@ -1001,7 +1003,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "65",
                             CityName = "Bijapur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9726),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(748),
                             IsActive = true,
                             ShortName = "Bijapur",
                             StateId = 15
@@ -1012,7 +1014,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "66",
                             CityName = "Bidar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9728),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(750),
                             IsActive = true,
                             ShortName = "Bidar",
                             StateId = 15
@@ -1023,7 +1025,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "67",
                             CityName = "Hospet",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9731),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(752),
                             IsActive = true,
                             ShortName = "Hospet",
                             StateId = 15
@@ -1034,7 +1036,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "68",
                             CityName = "Raichur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9733),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(754),
                             IsActive = true,
                             ShortName = "Raichur",
                             StateId = 15
@@ -1045,7 +1047,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "69",
                             CityName = "Thiruvananthapuram",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9735),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(756),
                             IsActive = true,
                             ShortName = "Thiruvananthapuram",
                             StateId = 16
@@ -1056,7 +1058,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "70",
                             CityName = "Kochi",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9737),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(758),
                             IsActive = true,
                             ShortName = "Kochi",
                             StateId = 16
@@ -1067,7 +1069,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "71",
                             CityName = "Calicut",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9739),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(760),
                             IsActive = true,
                             ShortName = "Calicut",
                             StateId = 16
@@ -1078,7 +1080,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "72",
                             CityName = "Quilon",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9741),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(762),
                             IsActive = true,
                             ShortName = "Quilon",
                             StateId = 16
@@ -1089,7 +1091,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "73",
                             CityName = "Trichur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9743),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(764),
                             IsActive = true,
                             ShortName = "Trichur",
                             StateId = 16
@@ -1100,7 +1102,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "74",
                             CityName = "Kavaratti",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9745),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(766),
                             IsActive = true,
                             ShortName = "Kavaratti",
                             StateId = 17
@@ -1111,7 +1113,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "75",
                             CityName = "Indore",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9748),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(768),
                             IsActive = true,
                             ShortName = "Indore",
                             StateId = 18
@@ -1122,7 +1124,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "76",
                             CityName = "Bhopal",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9751),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(770),
                             IsActive = true,
                             ShortName = "Bhopal",
                             StateId = 18
@@ -1133,7 +1135,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "77",
                             CityName = "Jabalpur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9754),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(772),
                             IsActive = true,
                             ShortName = "Jabalpur",
                             StateId = 18
@@ -1144,7 +1146,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "78",
                             CityName = "Gwalior",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9756),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(774),
                             IsActive = true,
                             ShortName = "Gwalior",
                             StateId = 18
@@ -1155,7 +1157,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "79",
                             CityName = "Ujjain",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9758),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(776),
                             IsActive = true,
                             ShortName = "Ujjain",
                             StateId = 18
@@ -1166,7 +1168,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "80",
                             CityName = "Saugor",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9760),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(779),
                             IsActive = true,
                             ShortName = "Saugor",
                             StateId = 18
@@ -1177,7 +1179,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "81",
                             CityName = "Sannai",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9762),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(782),
                             IsActive = true,
                             ShortName = "Sannai",
                             StateId = 18
@@ -1188,7 +1190,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "82",
                             CityName = "Ratlam",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9764),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(784),
                             IsActive = true,
                             ShortName = "Ratlam",
                             StateId = 18
@@ -1199,7 +1201,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "83",
                             CityName = "Mumbai",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9767),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(786),
                             IsActive = true,
                             ShortName = "Mumbai",
                             StateId = 19
@@ -1210,7 +1212,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "84",
                             CityName = "Pune",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9769),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(788),
                             IsActive = true,
                             ShortName = "Pune",
                             StateId = 19
@@ -1221,7 +1223,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "85",
                             CityName = "Nagpur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9771),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(790),
                             IsActive = true,
                             ShortName = "Nagpur",
                             StateId = 19
@@ -1232,7 +1234,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "86",
                             CityName = "Chinchvad",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9773),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(792),
                             IsActive = true,
                             ShortName = "Chinchvad",
                             StateId = 19
@@ -1243,7 +1245,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "87",
                             CityName = "Kalyan",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9775),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(794),
                             IsActive = true,
                             ShortName = "Kalyan",
                             StateId = 19
@@ -1254,7 +1256,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "88",
                             CityName = "Nasik",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9777),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(796),
                             IsActive = true,
                             ShortName = "Nasik",
                             StateId = 19
@@ -1265,7 +1267,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "89",
                             CityName = "Aurangabad",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9779),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(798),
                             IsActive = true,
                             ShortName = "Aurangabad",
                             StateId = 19
@@ -1276,7 +1278,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "90",
                             CityName = "Thane",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9781),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(800),
                             IsActive = true,
                             ShortName = "Thane",
                             StateId = 19
@@ -1287,7 +1289,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "91",
                             CityName = "Bhiwandi",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9783),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(802),
                             IsActive = true,
                             ShortName = "Bhiwandi",
                             StateId = 19
@@ -1298,7 +1300,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "92",
                             CityName = "Solapur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9787),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(804),
                             IsActive = true,
                             ShortName = "Solapur",
                             StateId = 19
@@ -1309,7 +1311,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "93",
                             CityName = "Bhayandar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9790),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(806),
                             IsActive = true,
                             ShortName = "Bhayandar",
                             StateId = 19
@@ -1320,7 +1322,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "94",
                             CityName = "Kolhapur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9792),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(808),
                             IsActive = true,
                             ShortName = "Kolhapur",
                             StateId = 19
@@ -1331,7 +1333,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "95",
                             CityName = "Malegaon",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9794),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(809),
                             IsActive = true,
                             ShortName = "Malegaon",
                             StateId = 19
@@ -1342,7 +1344,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "96",
                             CityName = "Nanded",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9796),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(812),
                             IsActive = true,
                             ShortName = "Nanded",
                             StateId = 19
@@ -1353,7 +1355,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "97",
                             CityName = "Chanda",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9798),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(815),
                             IsActive = true,
                             ShortName = "Chanda",
                             StateId = 19
@@ -1364,7 +1366,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "98",
                             CityName = "Amravati",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9800),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(817),
                             IsActive = true,
                             ShortName = "Amravati",
                             StateId = 19
@@ -1375,7 +1377,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "99",
                             CityName = "Ulhasnagar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9802),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(826),
                             IsActive = true,
                             ShortName = "Ulhasnagar",
                             StateId = 19
@@ -1386,7 +1388,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "100",
                             CityName = "Dhulia",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9804),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(828),
                             IsActive = true,
                             ShortName = "Dhulia",
                             StateId = 19
@@ -1397,7 +1399,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "101",
                             CityName = "Jalgaon",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9807),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(830),
                             IsActive = true,
                             ShortName = "Jalgaon",
                             StateId = 19
@@ -1408,7 +1410,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "102",
                             CityName = "Sangli",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9809),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(832),
                             IsActive = true,
                             ShortName = "Sangli",
                             StateId = 19
@@ -1419,7 +1421,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "103",
                             CityName = "Akola",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9811),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(834),
                             IsActive = true,
                             ShortName = "Akola",
                             StateId = 19
@@ -1430,7 +1432,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "104",
                             CityName = "Parbhani",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9813),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(836),
                             IsActive = true,
                             ShortName = "Parbhani",
                             StateId = 19
@@ -1441,7 +1443,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "105",
                             CityName = "Latur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9815),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(838),
                             IsActive = true,
                             ShortName = "Latur",
                             StateId = 19
@@ -1452,7 +1454,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "106",
                             CityName = "Ahmadnagar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9817),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(840),
                             IsActive = true,
                             ShortName = "Ahmadnagar",
                             StateId = 19
@@ -1463,7 +1465,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "107",
                             CityName = "Ichalkaranji",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9819),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(842),
                             IsActive = true,
                             ShortName = "Ichalkaranji",
                             StateId = 19
@@ -1474,7 +1476,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "108",
                             CityName = "Imphal",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9822),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(844),
                             IsActive = true,
                             ShortName = "Imphal",
                             StateId = 20
@@ -1485,7 +1487,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "109",
                             CityName = "Shillong",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9825),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(846),
                             IsActive = true,
                             ShortName = "Shillong",
                             StateId = 21
@@ -1496,7 +1498,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "110",
                             CityName = "aizawl",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9827),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(848),
                             IsActive = true,
                             ShortName = "aizawl",
                             StateId = 22
@@ -1507,7 +1509,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "111",
                             CityName = "Kohima",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9829),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(850),
                             IsActive = true,
                             ShortName = "Kohima",
                             StateId = 23
@@ -1518,7 +1520,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "112",
                             CityName = "Bhubaneshwar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9832),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(852),
                             IsActive = true,
                             ShortName = "Bhubaneshwar",
                             StateId = 24
@@ -1529,7 +1531,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "113",
                             CityName = "Raurkela",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9834),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(855),
                             IsActive = true,
                             ShortName = "Raurkela",
                             StateId = 24
@@ -1540,7 +1542,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "114",
                             CityName = "Cuttack",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9836),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(858),
                             IsActive = true,
                             ShortName = "Cuttack",
                             StateId = 24
@@ -1551,7 +1553,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "115",
                             CityName = "Brahmapur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9838),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(860),
                             IsActive = true,
                             ShortName = "Brahmapur",
                             StateId = 24
@@ -1562,7 +1564,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "116",
                             CityName = "Sambalpur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9840),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(861),
                             IsActive = true,
                             ShortName = "Sambalpur",
                             StateId = 24
@@ -1573,7 +1575,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "117",
                             CityName = "Puducherry",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9842),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(863),
                             IsActive = true,
                             ShortName = "Puducherry",
                             StateId = 25
@@ -1584,7 +1586,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "118",
                             CityName = "Ludhiana",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9844),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(865),
                             IsActive = true,
                             ShortName = "Ludhiana",
                             StateId = 26
@@ -1595,7 +1597,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "119",
                             CityName = "Amritsar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9846),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(867),
                             IsActive = true,
                             ShortName = "Amritsar",
                             StateId = 26
@@ -1606,7 +1608,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "120",
                             CityName = "Jalandhar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9848),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(869),
                             IsActive = true,
                             ShortName = "Jalandhar",
                             StateId = 26
@@ -1617,7 +1619,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "121",
                             CityName = "Patiala",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9850),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(871),
                             IsActive = true,
                             ShortName = "Patiala",
                             StateId = 26
@@ -1628,7 +1630,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "122",
                             CityName = "Jaipur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9859),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(873),
                             IsActive = true,
                             ShortName = "Jaipur",
                             StateId = 27
@@ -1639,7 +1641,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "123",
                             CityName = "Kota",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9861),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(875),
                             IsActive = true,
                             ShortName = "Kota",
                             StateId = 27
@@ -1650,7 +1652,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "124",
                             CityName = "Jodhpur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9863),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(877),
                             IsActive = true,
                             ShortName = "Jodhpur",
                             StateId = 27
@@ -1661,7 +1663,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "125",
                             CityName = "Ajmer",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9867),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(879),
                             IsActive = true,
                             ShortName = "Ajmer",
                             StateId = 27
@@ -1672,7 +1674,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "126",
                             CityName = "Bikaner",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9870),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(881),
                             IsActive = true,
                             ShortName = "Bikaner",
                             StateId = 27
@@ -1683,7 +1685,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "127",
                             CityName = "Udaipur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9872),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(883),
                             IsActive = true,
                             ShortName = "Udaipur",
                             StateId = 27
@@ -1694,7 +1696,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "128",
                             CityName = "Sikar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9874),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(885),
                             IsActive = true,
                             ShortName = "Sikar",
                             StateId = 27
@@ -1705,7 +1707,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "129",
                             CityName = "Bhilwara",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9876),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(888),
                             IsActive = true,
                             ShortName = "Bhilwara",
                             StateId = 27
@@ -1716,7 +1718,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "130",
                             CityName = "Alwar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9878),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(890),
                             IsActive = true,
                             ShortName = "Alwar",
                             StateId = 27
@@ -1727,7 +1729,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "131",
                             CityName = "Bharatpur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9880),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(893),
                             IsActive = true,
                             ShortName = "Bharatpur",
                             StateId = 27
@@ -1738,7 +1740,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "132",
                             CityName = "Pali",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9882),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(895),
                             IsActive = true,
                             ShortName = "Pali",
                             StateId = 27
@@ -1749,7 +1751,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "133",
                             CityName = "Gangtok",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9884),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(897),
                             IsActive = true,
                             ShortName = "Gangtok",
                             StateId = 28
@@ -1760,7 +1762,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "134",
                             CityName = "Chennai",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9886),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(899),
                             IsActive = true,
                             ShortName = "Chennai",
                             StateId = 29
@@ -1771,7 +1773,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "135",
                             CityName = "Madurai",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9889),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(901),
                             IsActive = true,
                             ShortName = "Madurai",
                             StateId = 29
@@ -1782,7 +1784,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "136",
                             CityName = "Coimbatore",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9891),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(903),
                             IsActive = true,
                             ShortName = "Coimbatore",
                             StateId = 29
@@ -1793,7 +1795,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "137",
                             CityName = "Trichinopoly",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9893),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(905),
                             IsActive = true,
                             ShortName = "Trichinopoly",
                             StateId = 29
@@ -1804,7 +1806,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "138",
                             CityName = "Salem",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9895),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(907),
                             IsActive = true,
                             ShortName = "Salem",
                             StateId = 29
@@ -1815,7 +1817,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "139",
                             CityName = "Tiruppur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9897),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(909),
                             IsActive = true,
                             ShortName = "Tiruppur",
                             StateId = 29
@@ -1826,7 +1828,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "140",
                             CityName = "Tinnevelly",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9899),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(911),
                             IsActive = true,
                             ShortName = "Tinnevelly",
                             StateId = 29
@@ -1837,7 +1839,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "141",
                             CityName = "Tuticorin",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9902),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(913),
                             IsActive = true,
                             ShortName = "Tuticorin",
                             StateId = 29
@@ -1848,7 +1850,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "142",
                             CityName = "Rajapalaiyam",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9904),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(915),
                             IsActive = true,
                             ShortName = "Rajapalaiyam",
                             StateId = 29
@@ -1859,7 +1861,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "143",
                             CityName = "Nagercoil",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9906),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(917),
                             IsActive = true,
                             ShortName = "Nagercoil",
                             StateId = 29
@@ -1870,7 +1872,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "144",
                             CityName = "Tanjore",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9909),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(919),
                             IsActive = true,
                             ShortName = "Tanjore",
                             StateId = 29
@@ -1881,7 +1883,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "145",
                             CityName = "Hyderabad",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9911),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(924),
                             IsActive = true,
                             ShortName = "Hyderabad",
                             StateId = 30
@@ -1892,7 +1894,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "146",
                             CityName = "Warangal",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9913),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(927),
                             IsActive = true,
                             ShortName = "Warangal",
                             StateId = 30
@@ -1903,7 +1905,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "147",
                             CityName = "Nizamabad",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9915),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(930),
                             IsActive = true,
                             ShortName = "Nizamabad",
                             StateId = 30
@@ -1914,7 +1916,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "148",
                             CityName = "Karimnagar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9917),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(932),
                             IsActive = true,
                             ShortName = "Karimnagar",
                             StateId = 30
@@ -1925,7 +1927,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "149",
                             CityName = "Ramgundam",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9920),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(934),
                             IsActive = true,
                             ShortName = "Ramgundam",
                             StateId = 30
@@ -1936,7 +1938,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "150",
                             CityName = "Kagaznagar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9922),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(935),
                             IsActive = true,
                             ShortName = "Kagaznagar",
                             StateId = 30
@@ -1947,7 +1949,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "151",
                             CityName = "Agartala",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9924),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(937),
                             IsActive = true,
                             ShortName = "Agartala",
                             StateId = 31
@@ -1958,7 +1960,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "152",
                             CityName = "Lucknow",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9926),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(939),
                             IsActive = true,
                             ShortName = "Lucknow",
                             StateId = 32
@@ -1969,7 +1971,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "153",
                             CityName = "Cawnpore",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9928),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(942),
                             IsActive = true,
                             ShortName = "Cawnpore",
                             StateId = 32
@@ -1980,7 +1982,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "154",
                             CityName = "Mirzapur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9930),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(944),
                             IsActive = true,
                             ShortName = "Mirzapur",
                             StateId = 32
@@ -1991,7 +1993,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "155",
                             CityName = "Ghaziabad",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9932),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(946),
                             IsActive = true,
                             ShortName = "Ghaziabad",
                             StateId = 32
@@ -2002,7 +2004,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "156",
                             CityName = "agra",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9935),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(948),
                             IsActive = true,
                             ShortName = "agra",
                             StateId = 32
@@ -2013,7 +2015,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "157",
                             CityName = "Meerut",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9938),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(950),
                             IsActive = true,
                             ShortName = "Meerut",
                             StateId = 32
@@ -2024,7 +2026,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "158",
                             CityName = "Allahabad",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9940),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(952),
                             IsActive = true,
                             ShortName = "Allahabad",
                             StateId = 32
@@ -2035,7 +2037,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "159",
                             CityName = "Varanasi",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9942),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(960),
                             IsActive = true,
                             ShortName = "Varanasi",
                             StateId = 32
@@ -2046,7 +2048,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "160",
                             CityName = "Aligarh",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9944),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(962),
                             IsActive = true,
                             ShortName = "Aligarh",
                             StateId = 32
@@ -2057,7 +2059,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "161",
                             CityName = "Bareilly",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9947),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(964),
                             IsActive = true,
                             ShortName = "Bareilly",
                             StateId = 32
@@ -2068,7 +2070,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "162",
                             CityName = "Moradabad",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9949),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(967),
                             IsActive = true,
                             ShortName = "Moradabad",
                             StateId = 32
@@ -2079,7 +2081,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "163",
                             CityName = "Saharanpur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9951),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(969),
                             IsActive = true,
                             ShortName = "Saharanpur",
                             StateId = 32
@@ -2090,7 +2092,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "164",
                             CityName = "Gorakhpur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9953),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(971),
                             IsActive = true,
                             ShortName = "Gorakhpur",
                             StateId = 32
@@ -2101,7 +2103,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "165",
                             CityName = "Jhansi",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9955),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(973),
                             IsActive = true,
                             ShortName = "Jhansi",
                             StateId = 32
@@ -2112,7 +2114,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "166",
                             CityName = "Muzaffarnagar",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9957),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(975),
                             IsActive = true,
                             ShortName = "Muzaffarnagar",
                             StateId = 32
@@ -2123,7 +2125,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "167",
                             CityName = "Mathura",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9959),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(977),
                             IsActive = true,
                             ShortName = "Mathura",
                             StateId = 32
@@ -2134,7 +2136,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "168",
                             CityName = "Shahjanpur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9961),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(979),
                             IsActive = true,
                             ShortName = "Shahjanpur",
                             StateId = 32
@@ -2145,7 +2147,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "169",
                             CityName = "Firozabad",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9963),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(981),
                             IsActive = true,
                             ShortName = "Firozabad",
                             StateId = 32
@@ -2156,7 +2158,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "170",
                             CityName = "Rampur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9965),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(983),
                             IsActive = true,
                             ShortName = "Rampur",
                             StateId = 32
@@ -2167,7 +2169,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "171",
                             CityName = "Etawah",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9968),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(985),
                             IsActive = true,
                             ShortName = "Etawah",
                             StateId = 32
@@ -2178,7 +2180,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "172",
                             CityName = "Hapur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9970),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(987),
                             IsActive = true,
                             ShortName = "Hapur",
                             StateId = 32
@@ -2189,7 +2191,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "173",
                             CityName = "Sambhal",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9972),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(989),
                             IsActive = true,
                             ShortName = "Sambhal",
                             StateId = 32
@@ -2200,7 +2202,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "174",
                             CityName = "Dehra Dun",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9975),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(991),
                             IsActive = true,
                             ShortName = "Dehra Dun",
                             StateId = 33
@@ -2211,7 +2213,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "175",
                             CityName = "Kolkata",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9977),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(993),
                             IsActive = true,
                             ShortName = "Kolkata",
                             StateId = 34
@@ -2222,7 +2224,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "176",
                             CityName = "Haora",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9980),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(995),
                             IsActive = true,
                             ShortName = "Haora",
                             StateId = 34
@@ -2233,7 +2235,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "177",
                             CityName = "Durgapur",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9982),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(997),
                             IsActive = true,
                             ShortName = "Durgapur",
                             StateId = 34
@@ -2244,7 +2246,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "178",
                             CityName = "asansol",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9984),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(999),
                             IsActive = true,
                             ShortName = "asansol",
                             StateId = 34
@@ -2255,7 +2257,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "179",
                             CityName = "Bhatpara",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9986),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(1004),
                             IsActive = true,
                             ShortName = "Bhatpara",
                             StateId = 34
@@ -2266,7 +2268,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "180",
                             CityName = "Panihati",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9988),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(1006),
                             IsActive = true,
                             ShortName = "Panihati",
                             StateId = 34
@@ -2277,7 +2279,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "181",
                             CityName = "Kamarhati",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9990),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(1008),
                             IsActive = true,
                             ShortName = "Kamarhati",
                             StateId = 34
@@ -2288,7 +2290,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "182",
                             CityName = "Barddhaman",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(9997),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(1010),
                             IsActive = true,
                             ShortName = "Barddhaman",
                             StateId = 34
@@ -2299,7 +2301,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "183",
                             CityName = "Kulti",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 310, DateTimeKind.Local),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(1012),
                             IsActive = true,
                             ShortName = "Kulti",
                             StateId = 34
@@ -2310,7 +2312,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "184",
                             CityName = "Shiliguri",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 310, DateTimeKind.Local).AddTicks(2),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(1014),
                             IsActive = true,
                             ShortName = "Shiliguri",
                             StateId = 34
@@ -2321,7 +2323,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "185",
                             CityName = "Bali",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 310, DateTimeKind.Local).AddTicks(4),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(1016),
                             IsActive = true,
                             ShortName = "Bali",
                             StateId = 34
@@ -2332,7 +2334,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "186",
                             CityName = "Barasat",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 310, DateTimeKind.Local).AddTicks(6),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(1018),
                             IsActive = true,
                             ShortName = "Barasat",
                             StateId = 34
@@ -2343,7 +2345,7 @@ namespace RentalTracker.Web.Migrations
                             CityCode = "187",
                             CityName = "Uluberiya",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 310, DateTimeKind.Local).AddTicks(8),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 733, DateTimeKind.Local).AddTicks(1020),
                             IsActive = true,
                             ShortName = "Uluberiya",
                             StateId = 34
@@ -2400,7 +2402,7 @@ namespace RentalTracker.Web.Migrations
                             CountryCode = "91",
                             CountryName = "India",
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 307, DateTimeKind.Local).AddTicks(2374),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 730, DateTimeKind.Local).AddTicks(8822),
                             IsActive = true,
                             ShortName = "IN"
                         });
@@ -2465,62 +2467,6 @@ namespace RentalTracker.Web.Migrations
                         });
                 });
 
-            modelBuilder.Entity("RentalTracker.Web.Models.Rent", b =>
-                {
-                    b.Property<int>("RentId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CreatedBy")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<double>("OtherAmount")
-                        .HasColumnType("float");
-
-                    b.Property<string>("OtherExcess")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("ReadingAmount")
-                        .HasColumnType("float");
-
-                    b.Property<int>("ReadingUnit")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Remark")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("RentAmount")
-                        .HasColumnType("float");
-
-                    b.Property<DateTime>("RentDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("TenantId")
-                        .IsRequired()
-                        .HasColumnType("int");
-
-                    b.Property<string>("UpdatedBy")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("RentId");
-
-                    b.HasIndex("TenantId");
-
-                    b.ToTable("Rents");
-                });
-
             modelBuilder.Entity("RentalTracker.Web.Models.State", b =>
                 {
                     b.Property<int>("StateId")
@@ -2576,7 +2522,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 1,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(2849),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(5578),
                             IsActive = true,
                             ShortName = "AD",
                             StateCode = "1",
@@ -2587,7 +2533,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 2,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5588),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7625),
                             IsActive = true,
                             ShortName = "AN",
                             StateCode = "2",
@@ -2598,7 +2544,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 3,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5608),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7638),
                             IsActive = true,
                             ShortName = "AP",
                             StateCode = "3",
@@ -2609,7 +2555,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 4,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5611),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7642),
                             IsActive = true,
                             ShortName = "AS",
                             StateCode = "4",
@@ -2620,7 +2566,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 5,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5614),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7644),
                             IsActive = true,
                             ShortName = "BH",
                             StateCode = "5",
@@ -2631,7 +2577,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 6,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5616),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7646),
                             IsActive = true,
                             ShortName = "CH",
                             StateCode = "6",
@@ -2642,7 +2588,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 7,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5618),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7649),
                             IsActive = true,
                             ShortName = "CG",
                             StateCode = "7",
@@ -2653,7 +2599,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 8,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5621),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7651),
                             IsActive = true,
                             ShortName = "DL",
                             StateCode = "8",
@@ -2664,7 +2610,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 9,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5623),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7653),
                             IsActive = true,
                             ShortName = "GA",
                             StateCode = "9",
@@ -2675,7 +2621,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 10,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5625),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7655),
                             IsActive = true,
                             ShortName = "GJ",
                             StateCode = "10",
@@ -2686,7 +2632,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 11,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5629),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7657),
                             IsActive = true,
                             ShortName = "HR",
                             StateCode = "11",
@@ -2697,7 +2643,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 12,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5632),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7659),
                             IsActive = true,
                             ShortName = "HP",
                             StateCode = "12",
@@ -2708,7 +2654,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 13,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5635),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7661),
                             IsActive = true,
                             ShortName = "JK",
                             StateCode = "13",
@@ -2719,7 +2665,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 14,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5637),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7663),
                             IsActive = true,
                             ShortName = "JH",
                             StateCode = "14",
@@ -2730,7 +2676,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 15,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5639),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7666),
                             IsActive = true,
                             ShortName = "KR",
                             StateCode = "15",
@@ -2741,7 +2687,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 16,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5642),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7670),
                             IsActive = true,
                             ShortName = "KL",
                             StateCode = "16",
@@ -2752,7 +2698,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 17,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5644),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7672),
                             IsActive = true,
                             ShortName = "LW",
                             StateCode = "17",
@@ -2763,7 +2709,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 18,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5646),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7674),
                             IsActive = true,
                             ShortName = "MP",
                             StateCode = "18",
@@ -2774,7 +2720,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 19,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5648),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7676),
                             IsActive = true,
                             ShortName = "MH",
                             StateCode = "19",
@@ -2785,7 +2731,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 20,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5650),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7678),
                             IsActive = true,
                             ShortName = "MN",
                             StateCode = "20",
@@ -2796,7 +2742,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 21,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5653),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7681),
                             IsActive = true,
                             ShortName = "MG",
                             StateCode = "21",
@@ -2807,7 +2753,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 22,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5655),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7683),
                             IsActive = true,
                             ShortName = "MZ",
                             StateCode = "22",
@@ -2818,7 +2764,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 23,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5657),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7685),
                             IsActive = true,
                             ShortName = "NG",
                             StateCode = "23",
@@ -2829,7 +2775,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 24,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5659),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7687),
                             IsActive = true,
                             ShortName = "OD",
                             StateCode = "24",
@@ -2840,7 +2786,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 25,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5661),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7689),
                             IsActive = true,
                             ShortName = "PD",
                             StateCode = "25",
@@ -2851,7 +2797,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 26,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5664),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7691),
                             IsActive = true,
                             ShortName = "PB",
                             StateCode = "26",
@@ -2862,7 +2808,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 27,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5667),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7694),
                             IsActive = true,
                             ShortName = "RJ",
                             StateCode = "27",
@@ -2873,7 +2819,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 28,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5669),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7696),
                             IsActive = true,
                             ShortName = "SK",
                             StateCode = "28",
@@ -2884,7 +2830,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 29,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5672),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7698),
                             IsActive = true,
                             ShortName = "TN",
                             StateCode = "29",
@@ -2895,7 +2841,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 30,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5674),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7701),
                             IsActive = true,
                             ShortName = "TL",
                             StateCode = "30",
@@ -2906,7 +2852,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 31,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5676),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7702),
                             IsActive = true,
                             ShortName = "TP",
                             StateCode = "31",
@@ -2917,7 +2863,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 32,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5678),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7705),
                             IsActive = true,
                             ShortName = "UP",
                             StateCode = "32",
@@ -2928,7 +2874,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 33,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5680),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7708),
                             IsActive = true,
                             ShortName = "UK",
                             StateCode = "33",
@@ -2939,7 +2885,7 @@ namespace RentalTracker.Web.Migrations
                             StateId = 34,
                             CountryId = 1,
                             CreatedBy = "SystemGenerated",
-                            CreatedDate = new DateTime(2021, 7, 5, 2, 8, 56, 309, DateTimeKind.Local).AddTicks(5683),
+                            CreatedDate = new DateTime(2021, 7, 5, 0, 34, 24, 732, DateTimeKind.Local).AddTicks(7730),
                             IsActive = true,
                             ShortName = "WB",
                             StateCode = "34",
@@ -2949,7 +2895,7 @@ namespace RentalTracker.Web.Migrations
 
             modelBuilder.Entity("RentalTracker.Web.Models.TenantMaster", b =>
                 {
-                    b.Property<int>("TenantId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -3051,7 +2997,7 @@ namespace RentalTracker.Web.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("TenantId");
+                    b.HasKey("Id");
 
                     b.HasIndex("CityId");
 
@@ -3120,17 +3066,6 @@ namespace RentalTracker.Web.Migrations
                     b.Navigation("State");
                 });
 
-            modelBuilder.Entity("RentalTracker.Web.Models.Rent", b =>
-                {
-                    b.HasOne("RentalTracker.Web.Models.TenantMaster", "TenantMaster")
-                        .WithMany("Rents")
-                        .HasForeignKey("TenantId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("TenantMaster");
-                });
-
             modelBuilder.Entity("RentalTracker.Web.Models.State", b =>
                 {
                     b.HasOne("RentalTracker.Web.Models.Country", "Country")
@@ -3166,11 +3101,6 @@ namespace RentalTracker.Web.Migrations
             modelBuilder.Entity("RentalTracker.Web.Models.State", b =>
                 {
                     b.Navigation("Cities");
-                });
-
-            modelBuilder.Entity("RentalTracker.Web.Models.TenantMaster", b =>
-                {
-                    b.Navigation("Rents");
                 });
 #pragma warning restore 612, 618
         }
