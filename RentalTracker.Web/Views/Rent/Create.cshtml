@@ -1,0 +1,60 @@
+﻿@model Rent
+
+@{ ViewData["Title"] = "Create"; }
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Home</a></li>
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Tenant">Rent</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Create</li>
+    </ol>
+</nav>
+
+<form method="post" enctype="multipart/form-data" class="row g-3">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group col-md-3">
+        @Html.LabelFor(model => model.TenantId, null, htmlAttributes: new { @class = "form-label required" })
+        @Html.DropDownList("TenantId", null, "--Select Tenant--", htmlAttributes: new { @class = "form-select" })
+    </div>
+
+    <div class="form-group col-md-3">
+        <label asp-for="RentDate" class="form-label required"></label>
+        <input asp-for="RentDate" class="form-control">
+    </div>
+    <div class="form-group col-md-3">
+        <label asp-for="RentAmount" class="form-label required"></label>
+        <input asp-for="RentAmount" class="form-control">
+    </div>
+    <div class="form-group col-md-3">
+        <label asp-for="ReadingUnit" class="form-label required"></label>
+        <input asp-for="ReadingUnit" class="form-control">
+    </div>
+    <div class="form-group col-md-3">
+        <label asp-for="RentAmount" class="form-label required"></label>
+        <input asp-for="RentAmount" class="form-control">
+    </div>
+
+    <div class="form-group col-md-3">
+        <label asp-for="OtherExcess" class="form-label required"></label>
+        <input asp-for="OtherExcess" class="form-control">
+    </div>
+
+    <div class="form-group col-md-3">
+        <label asp-for="OtherAmount" class="form-label"></label>
+        <input asp-for="OtherAmount" class="form-control">
+    </div>
+    <div class="form-group col-md-3">
+        <label asp-for="Remark" class="form-label required"></label>
+        <input asp-for="Remark" class="form-control">
+    </div>
+
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a asp-action="Index" class="btn btn-light">Go Back</a>
+    </div>
+
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

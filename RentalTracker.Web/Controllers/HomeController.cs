@@ -12,7 +12,7 @@ namespace RentalTracker.Web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ITenantService _tenantService;
-
+        
         public HomeController(ILogger<HomeController> logger, ITenantService tenantService)
         {
             _logger = logger;

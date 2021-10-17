@@ -25,6 +25,13 @@ namespace RentalTracker.Web.Models
         [Display(Name = "Rent Date")]
         public DateTime RentDate { get; set; }
 
+
+        [DataType(DataType.Date)]
+        [Required(ErrorMessage = "Rent for month required")]
+        [Display(Name = "Rent for month")]
+        public DateTime Month { get; set; }
+
+
         [Required(ErrorMessage = "Rent amount required")]
         [Display(Name = "Rent Amount")]
         public Double RentAmount { get; set; }

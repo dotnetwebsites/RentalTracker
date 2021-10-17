@@ -42,6 +42,7 @@ namespace RentalTracker.Web
             //services.AddAutoMapper(typeof(Mapping));            
 
             services.AddScoped<ITenantService, TenantService>();
+            services.AddScoped<IRentService, RentService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ICommonService, CommonService>();
             services.AddScoped<IAppService, AppService>();

@@ -26,7 +26,9 @@
                              <div>House Rent: <i class="fa fa-rupee"></i> @item.HouseRent</div>
                              <div>Reading Unit: <i class="fa fa-rupee"></i> @item.ReadingPerUnit</div>
                              <div>Start Reading: @item.StartReading</div>
-                             <div>Total Payment Due: @due for  @monthCount</div>
+                             <div>Total Payment Due: @due for  @monthCount months</div>
+
+                             <div><a asp-route-returnUrl="" asp-route-id="@item.TenantId" asp-action="Create" asp-controller="Rent" asp-area="" class="btn btn-primary btn-sm">Add Rent</a></div>
                          </div>
                         <span class="badge bg-primary rounded-pill">@item.RentStartOn.ToString("MMM d, yyyy") </span>
                     </li>

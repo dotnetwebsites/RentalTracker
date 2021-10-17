@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Rent>
+
+@{ ViewData["Title"] = "Tenant Master"; }
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Rent</li>
+    </ol>
+</nav>
+<form class="row g-3">
+    <div class="col-md-12">
+        <div class="col-md-12 d-grid gap-2">
+            <a asp-action="Create" class="btn btn-primary">Add New</a>
+        </div>
+
+        <hr />
+
+        <div class="row row-cols-1 row-cols-md-3">
+            @foreach (var item in Model)
+            {                
+
+<div class="col">
+    <div class="card mb-3">
+        <div class="card-body">
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <h5 class="card-title">@item.RentAmount</h5>
+                </li>
+                <li class="list-group-item">
+                    Monthly Rent
+                    <i class="fa fa-rupee"></i>
+                    @item.RentDate
+                </li>
+                <li class="list-group-item">
+                    Rent Start Date
+                    <i class="fa fa-calendar"></i>
+                    @@item.RentStartOn.ToString("MMM d, yyyy")
+                </li>
+                <li class="list-group-item">
+                    Reading Per Unit
+                    <i class="fa fa-rupee"></i>
+                    @@item.ReadingPerUnit
+                </li>
+            </ul>
+
+        </div>
+        <div class="card-footer text-center">
+            <a asp-action="Delete" onclick="return DeleteConfirm();" asp-route-id="@item.TenantId" class="btn btn-danger">
+                <i class="fa fa-trash"></i>
+            </a>
+            <a asp-action="Edit" asp-route-id="@item.TenantId" class="btn btn-primary">
+                <i class="fa fa-edit"></i>
+            </a>
+        </div>
+    </div>
+</div>}
+        </div>
+
+    </div>
+
+</form>
+
